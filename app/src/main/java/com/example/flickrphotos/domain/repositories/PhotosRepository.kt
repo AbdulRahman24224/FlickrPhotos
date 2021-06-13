@@ -1,6 +1,5 @@
 package com.example.flickrphotos.domain.repositories
 
-
 import com.example.flickrphotos.domain.PhotosService
 import com.example.flickrphotos.domain.database.AppDatabase
 import com.example.flickrphotos.domain.database.appDatabase
@@ -17,9 +16,9 @@ class PhotosRepository(
 )   {
 
      fun retrieveReposListFromServer(page :Int) = photoService.retrievePhotosList(page = page)
-     fun retrieveReposListFromDatabase() = database.reposDao.queryAll()
-     fun isDatabaseEmpty()= database.reposDao.retrieveRepoCount() <= 0
-     fun saveReposListToDatabase(repos: MutableList<PhotoModel?>) = database.reposDao.saveAll(repos)
-     fun clearRepos() = database.reposDao.clearAll()
+     fun retrieveReposListFromDatabase(page: Int) = database.photosDao.retrieveByPage(page)
+     fun isDatabaseEmpty()= database.photosDao.retrieveRepoCount() <= 0
+     fun saveReposListToDatabase(repos: MutableList<PhotoModel?>) = database.photosDao.insertAll(repos)
+     fun clearRepos() = database.photosDao.clearAll()
 
 }
