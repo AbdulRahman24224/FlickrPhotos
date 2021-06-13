@@ -19,5 +19,5 @@ data class PhotoModel(
     val secret: String,
     val server: String,
     val title: String ,
-    val page: Int?=null
+    var page: Int?=null
 ) : Serializable
