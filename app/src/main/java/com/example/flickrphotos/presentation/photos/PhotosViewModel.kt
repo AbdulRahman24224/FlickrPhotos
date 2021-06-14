@@ -8,7 +8,7 @@ import com.example.flickrphotos.domain.engine.logDebug
 import com.example.flickrphotos.domain.engine.logError
 import com.example.flickrphotos.domain.engine.toMutableLiveData
 import com.example.flickrphotos.domain.repositories.PhotosRepository
-import com.example.flickrphotos.domain.repositories.photsRepository
+import com.example.flickrphotos.domain.repositories.photosRepository
 import com.example.flickrphotos.domain.usecases.PhotosResult
 
 import com.example.flickrphotos.domain.usecases.RetrieveReposUseCase
@@ -29,7 +29,7 @@ class PhotosViewModel(
     val toastText: PublishSubject<String> = PublishSubject.create(),
     val snackLD: MutableLiveData<String> = "".toMutableLiveData(),
     private val disposables: CompositeDisposable = CompositeDisposable(),
-    private val repository: PhotosRepository = photsRepository,
+    private val repository: PhotosRepository = photosRepository,
     val pageLD: MutableLiveData<Int> = 1.toMutableLiveData(),
     private val retrieveReposUseCase: RetrieveReposUseCase = RetrieveReposUseCase(
         repository,

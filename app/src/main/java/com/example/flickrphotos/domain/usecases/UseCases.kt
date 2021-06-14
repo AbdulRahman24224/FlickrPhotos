@@ -3,14 +3,14 @@ package com.example.flickrphotos.domain.usecases
 import androidx.lifecycle.MutableLiveData
 import com.example.flickrphotos.domain.database.appDatabase
 import com.example.flickrphotos.domain.repositories.PhotosRepository
-import com.example.flickrphotos.domain.repositories.photsRepository
+import com.example.flickrphotos.domain.repositories.photosRepository
 import com.example.flickrphotos.entities.PhotoModel
 
 
 typealias PhotosResult = MutableLiveData<MutableList<PhotoModel?>>
 
 class RetrieveReposUseCase(
-    private val repository: PhotosRepository = photsRepository,
+    private val repository: PhotosRepository = photosRepository,
     private val retrieving: MutableLiveData<Boolean>,
     private val result: PhotosResult,
     private val pageLD: MutableLiveData<Int>,

@@ -8,7 +8,7 @@ import com.example.flickrphotos.domain.photosService
 import com.example.flickrphotos.entities.PhotoModel
 
 
-val photsRepository: PhotosRepository by lazy { PhotosRepository() }
+val photosRepository: PhotosRepository by lazy { PhotosRepository() }
 
 class PhotosRepository(
     private val photoService: PhotosService = photosService,
