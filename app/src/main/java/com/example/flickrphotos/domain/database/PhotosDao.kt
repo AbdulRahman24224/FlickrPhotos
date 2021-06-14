@@ -11,12 +11,12 @@ import io.reactivex.Single
 
 
 @Dao
-interface PhotosDao{
+interface PhotosDao {
 
-    @Query( "  select * from PhotoModel Where page = :pageNumber   ")
-    fun retrieveByPage(pageNumber : Int): Single<MutableList<PhotoModel?>>
+    @Query("  select * from PhotoModel Where page = :pageNumber   ")
+    fun retrieveByPage(pageNumber: Int): Single<MutableList<PhotoModel?>>
 
-    @Query( "  select count(*) from PhotoModel ")
+    @Query("  select count(*) from PhotoModel ")
     fun retrieveRepoCount(): Int
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

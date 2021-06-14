@@ -3,11 +3,7 @@ package com.example.flickrphotos.domain.engine
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkInfo
 import android.os.Build
-import java.io.IOException
-import java.net.InetSocketAddress
-import java.net.Socket
 
 
 object ConnectivityUtil {
